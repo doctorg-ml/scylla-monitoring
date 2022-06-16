@@ -220,7 +220,7 @@ command-line option) You cannot complete it.
 
 Restart the monitoring stack
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-You need to stop the monitoring stack and run the ``stat-all.sh`` command with an additional flag:
+You need to stop the monitoring stack and run the ``start-all.sh`` command with an additional flag:
 
 ``-b "--storage.tsdb.allow-overlapping-blocks"``
 
@@ -229,10 +229,10 @@ Create the data files
 We will use the Promtool utility; it's already installed for you if you are using the docker container. 
 You will need the start time and end time for the process, in our example the start time is 360 days ago and the end time is 90 days ago.
 
-The start and end times are in epoc, so you will need to translate the times to epoc.  There are many ways to do this - for example, from the command line.
-Run the following command to get the epoc time for 90 days ago: : ``echo $((`date +%s` - 3600*24*90))``
+The start and end times are in epoch, so you will need to translate the times to epoch.  There are many ways to do this - for example, from the command line.
+Run the following command to get the epoch time for 90 days ago: : ``echo $((`date +%s` - 3600*24*90))``
 
-Log in to your docker container and run the following (``start`` and ``end`` should be the start and end in epoc time):
+Log in to your docker container and run the following (``start`` and ``end`` should be the start and end in epoch time):
 
 .. code-block:: bash
 
