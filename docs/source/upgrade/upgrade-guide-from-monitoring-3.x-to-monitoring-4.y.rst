@@ -220,7 +220,7 @@ command-line option) You cannot complete it.
 
 Restart the monitoring stack
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-You need to stop the monitoring stack and run the ``stat-all.sh`` command with an additional flag:
+Stop the monitoring stack and run the ``start-all.sh`` command with an additional flag:
 
 ``-b "--storage.tsdb.allow-overlapping-blocks"``
 
